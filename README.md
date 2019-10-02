@@ -79,3 +79,6 @@ bharath@Bharaths-Mac(master) $
 
 ### how to use the ansible vault password as environment variable as well check below gist
 https://gist.github.com/shawnsi/b13f6a740bddc670e633 
+
+### To use SSM secrets in the ECS task definitions check below
+https://github.com/Bharathkumarraju/ECS_Parameterstore
