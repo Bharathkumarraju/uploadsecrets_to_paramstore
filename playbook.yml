@@ -20,4 +20,4 @@
         value: "{{item.value.Value}}"
         overwrite_value: "always"
       no_log: true
-      with_dict: "{{java_envs}}"
+      with_dict: "{{python_envs}}"
