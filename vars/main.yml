@@ -1,0 +1,6 @@
+java_envs:
+  env1:  {Description: "DB Endpoint", Name: "/app/python/DBHOST", Type: "String", Value: "test.postgresql.com"}
+  env2:  {Description: "DB Port", Name: "/app/python/DBPORT", Type: "String", Value: "3306"}
+  env3:  {Description: "DB Password", Name: "/app/python/DBPWD", Type: "SecureString",  Value: "XYZSDKHASKASLFSL"}
+  env4:  {Description: "DB User", Name: "/app/python/DBUSER", Type: "String",  Value: "admin"}
+  env5:  {Description: "DB Name", Name: "/app/python/DATABASE", Type: "String", Value: "admindb"}

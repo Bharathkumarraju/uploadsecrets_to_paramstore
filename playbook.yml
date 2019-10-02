@@ -1,0 +1,15 @@
+--- # playbook to create and update the ssm param store
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: test
+      command: uname -a
+    - name: Always update a parameter store value and create a new version
+      aws_ssm_parameter_store:
+        name: "{{item.value.Name}}"
+        description: "{{item.value.Description}}"
+        string_type: "{{item.value.Type}}"
+        value: "{{item.value.Value}}"
+        overwrite_value: "always"
+      with_dict: "{{java_envs}}"
