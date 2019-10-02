@@ -75,3 +75,6 @@ localhost                  : ok=4    changed=2    unreachable=0    failed=0    s
 bharath@Bharaths-Mac(master) $ 
 
 ```
+
+### how to use the ansible vault password as environment variable as well check below gist
+https://gist.github.com/shawnsi/b13f6a740bddc670e633 
