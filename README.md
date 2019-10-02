@@ -3,6 +3,7 @@ how to upload secrets to ssm store
 
 ### Install ansible somehow
 `brew install ansible (or) pip install ansible`
+`And make sure you have correct AWS access credentials to use AWS's SSM Parameter store`
 
 ### encrypt the vars/main.yml as below
 ```
