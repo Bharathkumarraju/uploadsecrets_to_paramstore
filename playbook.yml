@@ -2,9 +2,16 @@
 - hosts: localhost
   connection: local
 
+  pre_tasks:
+    - name: Load variables for the particular environment
+      include_vars: "{{ item }}"
+      no_log: true
+      with_items:
+        - "../vars/main.yml"
   tasks:
-    - name: test
+    - name: test simple command
       command: uname -a
+
     - name: Always update a parameter store value and create a new version
       aws_ssm_parameter_store:
         name: "{{item.value.Name}}"
@@ -12,4 +19,5 @@
         string_type: "{{item.value.Type}}"
         value: "{{item.value.Value}}"
         overwrite_value: "always"
+      no_log: true
       with_dict: "{{java_envs}}"
