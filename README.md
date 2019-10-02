@@ -21,10 +21,10 @@ bharath@Bharaths-Mac(master) $ ansible-vault edit --vault-password-file .pass_fi
 bharath@Bharaths-Mac(master) $
 ```
 
-### Run playbook you can run from your local or your CI tool like jenkins or github actions or bamboo etc...
-### From CI tool advantage is you can store vault_pass in secrets(currently i have stored in repo itself for demo only)
+##### Run playbook you can run from your local or your CI tool like jenkins or github actions or bamboo etc...
+##### From CI tool advantage is you can store vault_pass in secrets(currently i have stored in repo itself for demo only)
 
-### use `no_log: true`  not to display passwords in ansible output :)
+##### use `no_log: true`  not to display passwords in ansible output :)
 
 ```
 bharath@Bharaths-Mac(master) $ ansible-playbook playbook.yml -vv  --vault-password-file .pass_file
