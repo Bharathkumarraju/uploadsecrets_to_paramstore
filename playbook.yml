@@ -1,4 +1,4 @@
---- # playbook to create and update the ssm param store
+--- # playbook to create and update the AWS ssm param store
 - hosts: localhost
   connection: local
 
