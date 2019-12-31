@@ -14,10 +14,10 @@
 
     - name: Always update a parameter store value and create a new version
       aws_ssm_parameter_store:
-        name: "{{item.value.Name}}"
-        description: "{{item.value.Description}}"
-        string_type: "{{item.value.Type}}"
-        value: "{{item.value.Value}}"
+        name: "{{item.Name}}"
+        description: "{{item.Description}}"
+        string_type: "{{item.Type}}"
+        value: "{{item.Value}}"
         overwrite_value: "always"
-      no_log: true
-      with_dict: "{{python_envs}}"
+#      no_log: true
+      with_items: "{{python_envs}}"
